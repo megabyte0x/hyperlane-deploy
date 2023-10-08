@@ -1,3 +1,12 @@
+# Validator Setup steps
+- create the folder called validator_data -> copy its path and paste it in ENV for ```HYP_BASE_CHECKPOINTSYNCER_PATH="put_path_here"```
+- Now Put ur URL and private key over there in the signers and URL in ```validatorConfig.env```(Do not commit to github)
+- Take the absolute path of the agent_config in ur artifacts then replace it for ```{absolute_path_of_json}``` inside the docker run command 
+-``` DOCKER_IMAGE=gcr.io/abacus-labs-dev/hyperlane-agent:8127fa5-20230823-161309```
+
+then run ```docker run -it --env-file validatorConfig.env --mount type=bind,source={absolute_path_of_json},target=/validatorConfig.json,readonly $DOCKER_IMAGE ./validator```
+
+
 # Hyperlane Deploy
 
 This repository contains scripts and tools to deploy Hyperlane and its popular extensions to any EVM-compatible chain.
