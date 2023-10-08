@@ -1,0 +1,32 @@
+{
+  "chains": {
+    "celestiapolaris": {
+      "name": "celestiapolaris",
+      "domain": 2061,
+      "addresses": {
+        "mailbox": "0xB7F96124A4dD38Ad5Ca99BAC9D2Fe6012EF363cA",
+        "interchainGasPaymaster": "0x599a8EcA131a104076FbF2bb68F7B5F629880754",
+        "validatorAnnounce": "0xd810EAcFf9fE048D13CC0E0c11cCcda6f51DBD2D"
+      },
+      "protocol": "ethereum",
+      "finalityBlocks": 2,
+      "index": {
+        "from": 1115
+      }
+    },
+    "mumbai": {
+      "name": "mumbai",
+      "domain": 80001,
+      "addresses": {
+        "mailbox": "0xCC737a94FecaeC165AbCf12dED095BB13F037685",
+        "interchainGasPaymaster": "0xbf01E7096d3247CD863e574Ea46f69C731EE5A05",
+        "validatorAnnounce": "0x3Fc742696D5dc9846e04f7A1823D92cb51695f9a"
+      },
+      "protocol": "ethereum",
+      "finalityBlocks": 1,
+      "index": {
+        "from": 29390033
+      }
+    }
+  }
+}

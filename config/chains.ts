@@ -383,5 +383,40 @@ export const chains: ChainMap<ChainMetadata> = {
       },
     ],
     isTestnet: true,
+  },
+  celestiapolaris: {
+    name: 'celestiapolaris',
+    chainId: 2061,
+    protocol: ProtocolType.Ethereum,
+    nativeToken: {
+      name: 'POL',
+      symbol: 'POLARIS',
+      decimals: 18,
+    },
+    rpcUrls: [
+      {
+        http: 'http://localhost:8545',
+      },
+    ],
+    blockExplorers: [
+    ],
+    isTestnet: true,
+    blocks: {
+      confirmations: 1,
+      reorgPeriod: 2,
+      estimateBlockTime: 13
+    }
+  },
+  anvil: {
+    name: 'anvil',
+    protocol: ProtocolType.Ethereum,
+    // anvil default chain id
+    chainId: 31337,
+    rpcUrls: [
+      {
+        http: 'http://localhost:8545',
+      },
+    ],
   }
 };
+

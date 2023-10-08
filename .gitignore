@@ -6,3 +6,7 @@ dist/
 .yarn/install-state.gz
 .yarn/cache
 yarn-error.log
+
+hyperlane-validator-signatures-ethereum
+
+*validator.env
