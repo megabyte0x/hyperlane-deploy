@@ -3,33 +3,7 @@ import { ChainMap, ChainMetadata, ProtocolType } from '@hyperlane-xyz/sdk';
 // import { chainMetadata } from '@hyperlane-xyz/sdk';
 // A map of chain names to ChainMetadata
 export const chains: ChainMap<ChainMetadata> = {
-  // ----------- Your chains here -----------------
-  polygonzkevm: {
-    name: 'polygonzkevm',
-    chainId: 1101,
-    protocol: ProtocolType.Ethereum,
-    domainId: 1101,
-    displayName: 'Polygon zkEVM',
-    displayNameShort: 'Polygon zkEVM',
-    nativeToken: {
-      name: 'ether',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: [
-      {
-        http: 'https://zkevm-rpc.com',
-      },
-    ],
-    blockExplorers: [
-      {
-        name: 'Polygon Scan',
-        url: 'https://zkevm.polygonscan.com',
-        apiUrl: 'https://api-zkevm.polygonscan.com/api',
-      },
-    ],
-    isTestnet: false,
-  },
+  // ----------- Testnets -----------------
   nordektestnet: {
     name: 'nordektestnet',
     chainId: 58875,
@@ -76,30 +50,6 @@ export const chains: ChainMap<ChainMetadata> = {
     ],
     isTestnet: true,
   },
-  shardeumsphinxdapp1: {
-    name: 'shardeumsphinxdapp1',
-    chainId: 8081,
-    protocol: ProtocolType.Ethereum,
-
-    nativeToken: {
-      name: 'shardeum',
-      symbol: 'SHM',
-      decimals: 18,
-    },
-    rpcUrls: [
-      {
-        http: 'https://dapps.shardeum.org/',
-      },
-    ],
-    blockExplorers: [
-      {
-        name: 'Shardeum Explorer',
-        url: 'https://explorer-dapps.shardeum.org',
-        apiUrl: 'https://api-zkevm.polygonscan.com/api',
-      },
-    ],
-    isTestnet: true,
-  },
   chiado: {
     name: 'chiado',
     chainId: 10200,
@@ -124,55 +74,9 @@ export const chains: ChainMap<ChainMetadata> = {
     ],
     isTestnet: true,
   },
-  // filecoincalibrationtestnet: {
-  //   name: 'filecoincalibrationtestnet',
-  //   chainId: 314159,
-  //       protocol: ProtocolType.Ethereum,
-
-  //   nativeToken: {
-  //     name: 'Chiado',
-  //     symbol: 'tFIL',
-  //     decimals: 18,
-  //   },
-  //   rpcUrls: [
-  //     {
-  //       http: 'https://filecoin-calibration.chainup.net/rpc/v1',
-  //     },
-  //   ],
-  //   blockExplorers: [
-  //     {
-  //       name: 'Filscan',
-  //       url: 'https://calibration.filscan.io',
-  //     },
-  //   ],
-  //   isTestnet: true,
-  // },
-  // testnet5irechain: {
-  //   name: 'testnet5irechain',
-  //   chainId: 997,
-  //       protocol: ProtocolType.Ethereum,
-
-  //   nativeToken: {
-  //     name: '5ire',
-  //     symbol: '5ire',
-  //     decimals: 18,
-  //   },
-  //   rpcUrls: [
-  //     {
-  //       http: 'https://rpc-testnet.5ire.network',
-  //     },
-  //   ],
-  //   blockExplorers: [
-  //     {
-  //       name: '5IRE EVM BLOCKCHAIN EXPLORER',
-  //       url: 'https://explorer.5ire.network',
-  //     },
-  //   ],
-  //   isTestnet: true,
-  // },
-  scrollalphatestnet: {
-    name: 'scrollalphatestnet',
-    chainId: 534353,
+  scrollsepolia: {
+    name: 'scrollsepolia',
+    chainId: 534351,
     protocol: ProtocolType.Ethereum,
 
     nativeToken: {
@@ -182,14 +86,14 @@ export const chains: ChainMap<ChainMetadata> = {
     },
     rpcUrls: [
       {
-        http: 'https://alpha-rpc.scroll.io/l2',
+        http: 'https://rpc.ankr.com/scroll_sepolia_testnet/48984f85a8171fc0928661b96ba1673bdb7a401d4d935cab222c6e0ad04b7b85',
       },
     ],
     blockExplorers: [
       {
-        name: 'Scroll Alpha Blockscout',
-        url: 'https://blockscout.scroll.io',
-        apiUrl: 'https://blockscout.scroll.io/api',
+        name: 'Scroll Sepolia Blockscout',
+        url: 'https://sepolia-blockscout.scroll.io/',
+        apiUrl: 'https://sepolia-blockscout.scroll.io/api',
       },
     ],
     isTestnet: true,
@@ -206,7 +110,7 @@ export const chains: ChainMap<ChainMetadata> = {
     },
     rpcUrls: [
       {
-        http: 'https://goerli.base.org',
+        http: 'https://rpc.ankr.com/base_goerli/48984f85a8171fc0928661b96ba1673bdb7a401d4d935cab222c6e0ad04b7b85',
       },
     ],
     blockExplorers: [
@@ -214,53 +118,6 @@ export const chains: ChainMap<ChainMetadata> = {
         name: 'Base Scan',
         url: 'https://goerli.basescan.org',
         apiUrl: 'https://api-goerli.basescan.org'
-      },
-    ],
-    isTestnet: true,
-  },
-  zksynceratestnet: {
-    name: 'zksynceratestnet',
-    chainId: 280,
-    protocol: ProtocolType.Ethereum,
-    nativeToken: {
-      name: 'ETH',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: [
-      {
-        http: 'https://testnet.era.zksync.dev',
-      },
-    ],
-    blockExplorers: [
-      {
-        name: 'zkSync Era Block Explorer',
-        url: 'https://goerli.explorer.zksync.io',
-        apiUrl: 'https://zksync2-testnet-explorer.zksync.dev',
-      },
-    ],
-    isTestnet: true,
-  },
-  goerlilinea: {
-    name: 'goerlilinea',
-    chainId: 59140,
-    protocol: ProtocolType.Ethereum,
-
-    nativeToken: {
-      name: 'ETH',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: [
-      {
-        http: 'https://rpc.goerli.linea.build',
-      },
-    ],
-    blockExplorers: [
-      {
-        name: 'Linea Scan',
-        url: 'https://goerli.lineascan.build',
-        apiUrl: 'https://api-testnet.lineascan.build/api'
       },
     ],
     isTestnet: true,
@@ -277,7 +134,7 @@ export const chains: ChainMap<ChainMetadata> = {
     },
     rpcUrls: [
       {
-        http: 'https://rpc.testnet.mantle.xyz',
+        http: 'https://rpc.testnet.mantle.xyz/',
       },
     ],
     blockExplorers: [
@@ -285,30 +142,6 @@ export const chains: ChainMap<ChainMetadata> = {
         name: 'Mantle Explorer',
         url: 'https://explorer.testnet.mantle.xyz',
         apiUrl: 'https://explorer.testnet.mantle.xyz/api',
-      },
-    ],
-    isTestnet: true,
-  },
-  mumbai: {
-    name: 'mumbai',
-    chainId: 80001,
-    protocol: ProtocolType.Ethereum,
-
-    nativeToken: {
-      name: 'MATIC',
-      symbol: 'MATIC',
-      decimals: 18,
-    },
-    rpcUrls: [
-      {
-        http: 'https://rpc.ankr.com/polygon_mumbai',
-      },
-    ],
-    blockExplorers: [
-      {
-        name: 'Polygon Scan',
-        url: 'https://mumbai.polygonscan.com',
-        apiUrl: 'https://api.polygonscan.com/api',
       },
     ],
     isTestnet: true,
@@ -407,16 +240,127 @@ export const chains: ChainMap<ChainMetadata> = {
       estimateBlockTime: 13
     }
   },
-  anvil: {
-    name: 'anvil',
+  filecoincalibrationtestnet: {
+    name: 'filecoincalibrationtestnet',
+    chainId: 314159,
     protocol: ProtocolType.Ethereum,
-    // anvil default chain id
-    chainId: 31337,
+
+    nativeToken: {
+      name: 'Chiado',
+      symbol: 'tFIL',
+      decimals: 18,
+    },
     rpcUrls: [
       {
-        http: 'http://localhost:8545',
+        http: 'https://filecoin-calibration.chainup.net/rpc/v1',
       },
     ],
+    blockExplorers: [
+      {
+        name: 'Filscan',
+        url: 'https://calibration.filscan.io',
+        apiUrl: 'https://calibration.filscan.io/api',
+      },
+    ],
+    isTestnet: true,
+  },
+  testnet5irechain: {
+    name: 'testnet5irechain',
+    chainId: 997,
+    protocol: ProtocolType.Ethereum,
+
+    nativeToken: {
+      name: '5ire',
+      symbol: '5ire',
+      decimals: 18,
+    },
+    rpcUrls: [
+      {
+        http: 'https://rpc-testnet.5ire.network',
+      },
+    ],
+    blockExplorers: [
+      {
+        name: '5IRE EVM BLOCKCHAIN EXPLORER',
+        url: 'https://explorer.5ire.network',
+        apiUrl: 'https://explorer.5ire.network/api',
+      },
+    ],
+    isTestnet: true,
+  },
+  zksynceratestnet: {
+    name: 'zksynceratestnet',
+    chainId: 280,
+    protocol: ProtocolType.Ethereum,
+    nativeToken: {
+      name: 'ETH',
+      symbol: 'ETH',
+      decimals: 18,
+    },
+    rpcUrls: [
+      {
+        http: 'https://testnet.era.zksync.dev',
+      },
+    ],
+    blockExplorers: [
+      {
+        name: 'zkSync Era Block Explorer',
+        url: 'https://goerli.explorer.zksync.io',
+        apiUrl: 'https://zksync2-testnet-explorer.zksync.dev',
+      },
+    ],
+    isTestnet: true,
+  },
+  goerlilinea: {
+    name: 'goerlilinea',
+    chainId: 59140,
+    protocol: ProtocolType.Ethereum,
+
+    nativeToken: {
+      name: 'ETH',
+      symbol: 'ETH',
+      decimals: 18,
+    },
+    rpcUrls: [
+      {
+        http: 'https://rpc.goerli.linea.build',
+      },
+    ],
+    blockExplorers: [
+      {
+        name: 'Linea Scan',
+        url: 'https://goerli.lineascan.build',
+        apiUrl: 'https://api-testnet.lineascan.build/api'
+      },
+    ],
+    isTestnet: true,
+  },
+  shardeumsphinxdapp1: {
+    name: 'shardeumsphinxdapp1',
+    chainId: 8081,
+    protocol: ProtocolType.Ethereum,
+
+    nativeToken: {
+      name: 'shardeum',
+      symbol: 'SHM',
+      decimals: 18,
+    },
+    rpcUrls: [
+      {
+        http: 'https://dapps.shardeum.org/',
+      },
+    ],
+    blockExplorers: [
+      {
+        name: 'Shardeum Explorer',
+        url: 'https://explorer-dapps.shardeum.org',
+        apiUrl: 'https://api-zkevm.polygonscan.com/api',
+      },
+    ],
+    isTestnet: true,
   }
 };
 
+
+// Address:     0xd56C95f4832832591A92aa21979ed6247666C10C
+// Private key: 0x3a80e13717e0ce45175b3b4b103fd55c4b0594901f4be65481d76683588a8f02

@@ -62,7 +62,7 @@ export const multisigIsmConfig: ChainMap<MultisigIsmConfig> = {
       '0x5c690e1ba18c92c2b92b89e096db93d3dec0faa0',
     ],
   },
-  scrollalphatestnet: {
+  scrollsepolia: {
     threshold: 1,
     type: ModuleType.LEGACY_MULTISIG,
     validators: [
